@@ -1,0 +1,26 @@
+
+<div class="bg-secondary-subtle py-5 mt-5 ">
+    
+    <div class="container ">
+        <div class="row gy-3">
+            @for (data of allData; track $index) {
+            <div class="col-md-4">
+                <div class="card">
+                    <div>
+                        <img [src]="data.image" class="w-100 p-3 " alt="movee">
+    
+                    </div>
+    
+                    <div class="card-body">
+    
+                        <h4> {{data.title.split(" ",4).join("")}} </h4>
+                        <p> {{data.description.split(" ",5).join(" ")}} </p>
+                        <span> <span class="h3">price</span> {{data.price}} EGP</span>
+                    </div>
+                </div>
+            </div>
+    
+            }
+        </div>
+    </div>
+</div>
